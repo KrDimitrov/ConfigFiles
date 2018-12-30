@@ -1,0 +1,10 @@
+#! /bin/bash
+DT=${DT:-"+%d/%m/%Y %H:%M:%S"}
+
+OUTPUT="$(date "$DT")"
+
+if [ "${BLOCK_BUTTON}" -eq 1 ];
+then i3-msg exec dde-calendar
+fi
+
+echo "$OUTPUT" 

@@ -1,0 +1,125 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+# Change $SCRIPT_DIR to the location of your scripts!
+#command=$SCRIPT_DIR/$BLOCK_NAME
+#separator_block_width=15
+#markup=SanFranciscoDisplay
+
+
+full_text=
+align=center
+separator=false
+separator_block_width=0
+color=#e7dfd9
+markup=pango
+
+border_left=0
+border_right=0
+border_top=25
+border_bottom=25
+border=#253941
+
+[separator2]
+full_text=<span background="#2E1760" foreground="#6BD425"></span>
+markup=pango
+border=#2E1760
+background=#2E1760
+
+[weather]
+command=~/.config/i3blocks/weather/weather
+interval=120
+markup=pango
+background=#6BD425
+color=#0D0630
+#just a space for label, to.. you know.. space things out :)
+label= 
+
+[separator1]
+full_text=<span background="#6BD425" foreground="#C41E3D"></span>
+markup=pango
+border=#6BD425
+background=#6BD425
+
+[memory_usage]
+command=~/.config/i3blocks/memory/memory
+interval=10
+label=  
+markup=pango
+background=#C41E3D
+
+
+
+[cpu_usage]
+command=~/.config/i3blocks/cpu_usage/cpu_usage
+interval=10
+label=    
+markup=pango
+background=#C41E3D
+
+[separator2]
+full_text=<span background="#C41E3D" foreground="#00ABE7"></span>
+markup=pango
+border=#C41E3D
+background=#C41E3D
+
+[volume-pulse]
+command=~/.config/i3blocks/volume-pulseaudio/volume-pulseaudio
+interval=once
+label=  
+signal=1
+LONG_FORMAT=${SYMB}${VOL}%[${INDEX}]
+background=#00ABE7
+DEFAULT_COLOR=#0D0630
+MUTED_COLOR=#0081AF
+
+[separator1]
+full_text=<span background="#00ABE7" foreground="#133C55"></span>
+markup=pango
+border=#00ABE7
+background=#00ABE7
+
+[time]
+command=~/.config/i3blocks/datetime/datetime
+interval=1
+label=  
+DT=+%a-%d %H:%M
+color=#2DC7FF
+background=#133C55
+markup=pango
+
+
+[separator2]
+full_text=<span background="#133C55" foreground="#E6C229"></span>
+markup=pango
+border=#133C55
+background=#133C55
+
+
+
+
+
+
