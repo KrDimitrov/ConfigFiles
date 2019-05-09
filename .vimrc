@@ -68,6 +68,8 @@ Plugin 'honza/vim-snippets'
 Plugin 'digitaltoad/vim-pug'
 " bracked autoclosing
 Plugin 'Raimondi/delimitMate'
+" Arduino
+Plugin 'stevearc/vim-arduino'
 
 " add plugins before this line
 call vundle#end()
@@ -76,7 +78,7 @@ filetype plugin indent on " required
 
 syntax on
 set background=dark
-colorscheme molokai
+colorscheme solarized
 set colorcolumn=80
 set number
 set showcmd
@@ -167,6 +169,7 @@ let g:airline_theme='bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#hunks#enabled = 0
+let g:airline#extensions#ale#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " ale settings
@@ -198,3 +201,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " autoclosing on enter
 let g:delimitMate_expand_cr = 2
+
+
+
+" arduino install dir
+let g:arduino_cmd = '/usr/share/arduino/arduino'
+let g:arduino_dir = '/usr/share/arduino'
